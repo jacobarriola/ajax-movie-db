@@ -16,6 +16,10 @@ $(document).ready(function(){
       }
 
       movieData += '</ul>';
+      if(data.Poster) {
+        movieData += '<h2 style="text-transform: capitalize;">' + data.Type + ' Poster</h2>';
+        movieData +=  '<img src="' + data.Poster + '">';
+      }
       console.log(data);
       $('#movieList').html(movieData);
     }
